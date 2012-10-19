@@ -5,6 +5,11 @@
 		<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+		<style>
+			body{
+				padding: 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<?php
@@ -14,8 +19,15 @@
 		$result = mysql_query($sql);
 		?>
 		<div class="row">
-		<div class="span4">
-		<ol>
+			<div class="span12">
+				<h1>
+					Javascript
+					</h1>
+			</div>
+		</div>
+		<div class="row">
+		<div class="span3">
+		<ol class="nav nav-tabs nav-stacked">
 			<?php
 			while ($row = mysql_fetch_assoc($result)) {
 			?>
@@ -33,7 +45,7 @@
 		$result = mysql_query($sql);
 		$row = mysql_fetch_assoc($result);
 		?>
-		<div class="span8">
+		<div class="span9">
 			<div>
 				<h2><?=htmlspecialchars($row['title']) ?></h2>
 				<div><?=$row['description'] ?></div>
